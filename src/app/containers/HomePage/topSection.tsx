@@ -5,6 +5,7 @@ import tw from 'twin.macro';
 import MclarenCarImg from "../../../assets/images/mclaren-orange-big.png";
 import BlobImg from "../../../assets/images/blob.svg";
 import { SCREENS } from '../../components/responsive';
+import { Button } from '../../components/button';
 
 const TopSectionContainer = styled.div`
     min-height: 600px;
@@ -139,6 +140,14 @@ const StandaloneCar = styled.div`
     }
 `;
 
+const ButtonsContainer = styled.div`
+    ${tw`
+        flex
+        flex-wrap
+        mt-4
+    `}
+`;
+
 
 export function TopSection(){
     return <TopSectionContainer>
@@ -148,6 +157,10 @@ export function TopSection(){
                 Always Choose the est car from our lolcal stres or order it remotely
                 at the best price
             </Description>
+            <ButtonsContainer>
+                <Button text="Book your Ride" />
+                <Button theme="filled" text="Sell your Car" />
+            </ButtonsContainer>
         </LeftContainer>
         <RightContainer>
             <BlobContainer>
